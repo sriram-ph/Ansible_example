@@ -1,3 +1,5 @@
+- debug:
+    msg: "{{ lookup('cypher','secret=password/myusername') }}"
 - name: Print hello world
   gather_facts: no
   hosts: localhost
