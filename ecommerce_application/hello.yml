@@ -2,6 +2,5 @@
     msg: "{{ lookup('cypher','secret=secret/name') }}"
 - name: Print hello world
   gather_facts: no
-  hosts: localhost
   roles: 
     - hello-world
