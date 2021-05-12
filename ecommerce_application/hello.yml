@@ -1,6 +1,9 @@
-- name: Test
-    msg: "{{ lookup('cypher','secret=secret/name') }}"
-- name: Print hello world
-  gather_facts: no
-  roles: 
-    - hello-world
+---
+- name: Printing Test
+  hosts: all
+  become: True
+  tasks:
+
+  - name: Print out cypher
+    debug: 
+      msg: "This is a secret from Cypher: {{ lookup('cypher','secret=secret/name') }}"
