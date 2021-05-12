@@ -1,4 +1,4 @@
-- debug:
+- name: Test
     msg: "{{ lookup('cypher','secret=secret/name') }}"
 - name: Print hello world
   gather_facts: no
